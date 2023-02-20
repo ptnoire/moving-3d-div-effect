@@ -1,0 +1,96 @@
+body {
+    background-color: #000000;
+    font-family: 'Space Mono', monospace;
+    color: whitesmoke;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(183, 51, 51);
+}
+
+h2 {
+    color: #79c82a;
+}
+
+p {
+    text-align: justify;
+}
+
+
+.section {
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
+    border: 1px solid rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+    background: #000000;
+  }
+  
+  .square {
+    margin-left: 30%;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 550px;
+    height: auto;
+    background: #000000;
+    border: 1px solid whitesmoke;
+    position: absolute;
+    z-index: 2;
+    transform-style: preserve-3d;
+    transition: transform 0.2s ease-out;
+  }
+  
+  .square::before,
+  .square::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    border: inherit;
+    border-radius: inherit;
+  }
+  
+  .square::before {
+    transform: translateZ(-50px);
+  }
+  
+  .square::after {
+    transform: translateZ(-50px);
+  }
+  
+
+.glitching {
+    text-shadow: -3px 0 2px #9f0c0c7c, 5px 0 2px #ea4aff7b, 0 3px 2px #00f2ff76, 0 -2px 0 #fff7007a;
+    animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+}
+
+  @keyframes glitch {
+    0% {
+      transform: skew(0);
+    }
+    20% {
+      transform: skew(6deg);
+    }
+    40% {
+      transform: skew(-6deg);
+      text-shadow: -4px 0 3px #9f0c0c7c, 6px 0 3px #ea4aff7b, 0 2px 1px #00f2ff76, 0 -3px 0 #fff7007a;
+    }
+    60% {
+      transform: skew(0);
+    }
+    80% {
+      transform: skew(-6deg);
+      text-shadow: -6px 0 5px #9f0c0c7c, 8px 0 3px #ea4aff7b, 0 4px 2px #00f2ff76, 0 -5px 0 #fff7007a;
+    }
+    100% {
+      transform: skew(2deg);
+    }
+  }
