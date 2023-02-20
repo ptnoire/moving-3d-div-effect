@@ -59,7 +59,7 @@ p {
   }
   
   .square::before {
-    transform: translateZ(-50px);
+    transform: translateZ(-100px);
   }
   
   .square::after {
